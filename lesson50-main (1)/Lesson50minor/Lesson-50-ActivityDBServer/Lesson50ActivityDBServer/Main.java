@@ -1,12 +1,6 @@
-import com.sun.net.httpserver.HttpContext;
-import com.sun.net.httpserver.HttpExchange;
-import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 import java.io.IOException;
-import java.sql.*;
-
 import java.net.InetSocketAddress;
-import java.util.Map;
 
 //For compiling on the shell on repl: Same on mac
 //javac -cp sqlite-jdbc-3.23.1.jar: Main.java
@@ -39,6 +33,7 @@ class Main {
    // Add your  code here
     
     server.createContext("/", new RouteHandler("You are connected, but route not given or incorrect....") );
+    server.createContext("/songs", new RouteHandler(db, "SELECT Name FROM tracks;"));
 
   
     //Start the server

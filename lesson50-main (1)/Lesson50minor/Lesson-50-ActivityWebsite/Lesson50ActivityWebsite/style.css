@@ -48,6 +48,18 @@ nav a:hover{
 .heading{
   font-weight:bold;
 }
+#output {
+  display:flex;
+  gap: 1rem;
+  flex-direction: column;
+  padding:1rem;
+}
+.card {
+  border:1px solid black;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align:center;
+}
 .card a{
   text-decoration:none;
   background-color:blue;
@@ -72,6 +84,4 @@ nav a:hover{
   border:1px solid black;
   
 }
-#output{
 
-}
